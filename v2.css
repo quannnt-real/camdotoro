@@ -48,9 +48,5 @@ img.ph { background: var(--bg-tint); }   /* nền chờ khi ảnh chưa tải */
 .cta-img .btn--brand:hover { background: #eefaf9; }
 .cta-img .btn--ghost { background: rgba(255, 255, 255, 0.08); color: #fff; border-color: rgba(255, 255, 255, 0.3); }
 
-/* Badge "phiên bản" nhỏ ở topbar */
-.ver-link { color: var(--brand-300); font-weight: 600; }
-.ver-link:hover { color: #fff; }
-
 @media (max-width: 1024px) { .assets__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px) { .assets__grid { grid-template-columns: 1fr 1fr; } .hero-img__cta .btn { width: 100%; justify-content: center; } }
