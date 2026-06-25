@@ -16,7 +16,7 @@ Hai bản dùng chung `style.css` + `script.js`, tông màu **teal sáng (uy tí
 
 ## Ảnh (quan trọng)
 
-Ảnh trong `v2.html` hiện là **ảnh DEMO** lấy từ `loremflickr.com` (Flickr CC ngẫu nhiên) — chỉ để minh hoạ bố cục. **Trước khi chạy thật phải thay bằng ảnh của chính cửa hàng / tài sản (đúng bản quyền)**; ảnh thật còn giúp tăng độ tin cậy. Mỗi ảnh đã có comment `ẢNH DEMO` để dễ tìm và thay.
+Ảnh trong `v2.html` (và 2 ảnh accent ở hero + "về chúng tôi" của `index.html`) hiện là **ảnh DEMO** lấy từ `loremflickr.com` (Flickr CC ngẫu nhiên) — chỉ để minh hoạ bố cục. **Trước khi chạy thật phải thay bằng ảnh của chính cửa hàng / tài sản (đúng bản quyền)**; ảnh thật còn giúp tăng độ tin cậy. Mỗi ảnh đã có comment `ẢNH DEMO` để dễ tìm và thay.
 
 ## Chạy thử
 
