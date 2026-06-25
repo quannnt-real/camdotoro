@@ -6,9 +6,17 @@ Landing page một trang (single-page) cho dịch vụ **Cầm đồ Toro**: c�
 
 | File | Vai trò |
 | --- | --- |
-| `index.html` | Toàn bộ nội dung &amp; cấu trúc 12 khối section |
-| `style.css` | Design system (CSS custom properties), layout, hiệu ứng |
+| `index.html` | **Bản v1** (không ảnh) — nội dung &amp; cấu trúc các khối section |
+| `style.css` | Design system dùng chung (CSS custom properties), layout, hiệu ứng |
 | `script.js` | Menu mobile, accordion FAQ, validate form, máy tính lãi, reveal-on-scroll |
+| `v2.html` | **Bản v2** (giàu hình ảnh) — hero ảnh nền, gallery tài sản, ảnh "về chúng tôi", CTA ảnh nền |
+| `v2.css` | Bổ sung thành phần dùng ảnh cho v2 (nạp sau `style.css`) |
+
+Hai bản dùng chung `style.css` + `script.js`, tông màu **teal sáng (uy tín)**. Trên topbar của v2 có link qua lại **Bản v1 / v2**.
+
+## Ảnh (quan trọng)
+
+Ảnh trong `v2.html` hiện là **ảnh DEMO** lấy từ `loremflickr.com` (Flickr CC ngẫu nhiên) — chỉ để minh hoạ bố cục. **Trước khi chạy thật phải thay bằng ảnh của chính cửa hàng / tài sản (đúng bản quyền)**; ảnh thật còn giúp tăng độ tin cậy. Mỗi ảnh đã có comment `ẢNH DEMO` để dễ tìm và thay.
 
 ## Chạy thử
 

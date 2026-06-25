@@ -1,0 +1,56 @@
+/* =====================================================================
+   v2.css — bổ sung các thành phần DÙNG HÌNH ẢNH cho trang v2.
+   Nạp SAU style.css (kế thừa toàn bộ token màu/teal/spacing của v1).
+   ===================================================================== */
+
+img.ph { background: var(--bg-tint); }   /* nền chờ khi ảnh chưa tải */
+
+/* ---------- Hero có ảnh nền ---------- */
+.hero-img { position: relative; display: flex; align-items: center; min-height: clamp(440px, 72vh, 620px); color: #fff; overflow: hidden; background: var(--ink); }
+.hero-img__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(8, 32, 33, 0.94) 0%, rgba(8, 32, 33, 0.74) 44%, rgba(8, 32, 33, 0.32) 100%); }
+.hero-img__inner { position: relative; z-index: 2; max-width: 600px; padding-block: clamp(40px, 8vw, 84px); }
+.hero-img .hero__title { color: #fff; font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.14; margin: 0.8rem 0 0.9rem; }
+.hero-img .hero__sub { color: rgba(255, 255, 255, 0.86); max-width: 46ch; }
+.hero-img .hero__sub strong { color: #fff; }
+.hero-img .eyebrow { background: rgba(255, 255, 255, 0.12); color: #bdeae8; }
+.hero-img__points { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin: 1.2rem 0 1.6rem; }
+.hero-img__points li { display: inline-flex; align-items: center; gap: 0.45rem; color: #fff; font-weight: 500; font-size: 0.94rem; }
+.hero-img__points .ico { color: var(--brand-300); }
+.hero-img__cta { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.hero-img .btn--ghost { background: rgba(255, 255, 255, 0.08); color: #fff; border-color: rgba(255, 255, 255, 0.28); }
+.hero-img .btn--ghost:hover { background: rgba(255, 255, 255, 0.16); color: #fff; }
+
+/* ---------- Gallery "tài sản nhận cầm" ---------- */
+.assets__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
+.asset-card { position: relative; display: block; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 3 / 4; background: var(--bg-tint); box-shadow: var(--shadow); }
+.asset-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+.asset-card:hover img { transform: scale(1.06); }
+.asset-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 38%, rgba(8, 32, 33, 0.86)); }
+.asset-card__label { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1rem; color: #fff; }
+.asset-card__label strong { font-family: var(--font-display); font-size: 1.05rem; display: block; }
+.asset-card__label span { font-size: 0.82rem; opacity: 0.86; }
+
+/* ---------- About có ảnh ---------- */
+.about-img__media { position: relative; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4 / 3.4; background: var(--bg-tint); }
+.about-img__media img { width: 100%; height: 100%; object-fit: cover; }
+.about-img__tag { position: absolute; left: 14px; bottom: 14px; z-index: 2; background: rgba(255, 255, 255, 0.92); color: var(--brand-700); font-weight: 600; font-size: 0.82rem; padding: 0.4rem 0.7rem; border-radius: var(--r-sm); backdrop-filter: blur(6px); }
+
+/* ---------- CTA cuối có ảnh nền ---------- */
+.cta-img { position: relative; overflow: hidden; color: #fff; text-align: center; padding-block: clamp(56px, 7vw, 96px); background: var(--ink); }
+.cta-img__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14, 122, 120, 0.92), rgba(10, 93, 91, 0.94)); }
+.cta-img__inner { position: relative; z-index: 2; max-width: 680px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.cta-img .finalcta__title { color: #fff; }
+.cta-img__inner > p { color: rgba(255, 255, 255, 0.88); font-size: 1.02rem; }
+.cta-img__btns { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; margin-top: 1.3rem; }
+.cta-img .btn--brand { background: #fff; color: var(--brand-700); }
+.cta-img .btn--brand:hover { background: #eefaf9; }
+.cta-img .btn--ghost { background: rgba(255, 255, 255, 0.08); color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+
+/* Badge "phiên bản" nhỏ ở topbar */
+.ver-link { color: var(--brand-300); font-weight: 600; }
+.ver-link:hover { color: #fff; }
+
+@media (max-width: 1024px) { .assets__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .assets__grid { grid-template-columns: 1fr 1fr; } .hero-img__cta .btn { width: 100%; justify-content: center; } }
