@@ -186,18 +186,27 @@
          Hiện tại chỉ MÔ PHỎNG gửi thành công phía client.
          ============================================================ */
 
-      if (success) {
-        success.hidden = false;
-        success.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'center' });
-      }
-      form.querySelector('button[type="submit"]').disabled = true;
+      // Trạng thái "đang gửi" (chỉ hiện thành công SAU khi đã gửi xong)
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn.querySelector('.btn__label');
+      var originalLabel = label ? label.textContent : '';
+      btn.disabled = true;
+      if (label) label.textContent = 'Đang gửi…';
 
-      // Reset nhẹ sau vài giây để có thể gửi tiếp (tuỳ chọn)
+      // Mô phỏng thời gian gửi (thay bằng await fetch(...) khi tích hợp API thật)
       setTimeout(function () {
-        form.reset();
-        if (success) success.hidden = true;
-        form.querySelector('button[type="submit"]').disabled = false;
-      }, 6000);
+        if (label) label.textContent = originalLabel;
+        if (success) {
+          success.hidden = false;
+          success.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'center' });
+        }
+        // Cho phép gửi tiếp sau vài giây
+        setTimeout(function () {
+          form.reset();
+          if (success) success.hidden = true;
+          btn.disabled = false;
+        }, 6000);
+      }, 950);
     });
   })();
 
