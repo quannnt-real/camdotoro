@@ -1,0 +1,9 @@
+# Công cụ cục bộ (không thuộc sản phẩm website)
+.claude/
+.impeccable/
+
+# Hệ thống / editor
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
