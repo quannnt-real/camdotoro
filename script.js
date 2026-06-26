@@ -265,4 +265,41 @@
     if (el) el.textContent = new Date().getFullYear();
   })();
 
+  /* ----------------------------------------------------------------
+     9. SHOWCASE DỊCH VỤ  (danh sách + panel ảnh: rê/bấm đổi, tự xoay vòng)
+     ---------------------------------------------------------------- */
+  (function serviceShowcase() {
+    var items = doc.querySelectorAll('#show-list .show-item');
+    var slides = doc.querySelectorAll('#show-stage .show-slide');
+    if (!items.length || !slides.length) return;
+
+    var countEl = doc.getElementById('show-count');
+    var cur = 0, timer = null;
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function go(i) {
+      cur = i;
+      items.forEach(function (x, k) { x.classList.toggle('active', k === i); });
+      slides.forEach(function (x, k) { x.classList.toggle('active', k === i); });
+      if (countEl) countEl.innerHTML = '<b>' + pad(i + 1) + '</b> / ' + pad(items.length);
+    }
+    items.forEach(function (it) {
+      var i = Number(it.getAttribute('data-i'));
+      it.addEventListener('mouseenter', function () { go(i); });
+      it.addEventListener('click', function () { go(i); });
+    });
+
+    // Không tự xoay khi tắt chuyển động, hoặc ở tablet/mobile (accordion bấm tay)
+    if (prefersReduced) return;
+    if (!window.matchMedia('(min-width: 861px)').matches) return;
+
+    function start() { timer = window.setInterval(function () { go((cur + 1) % items.length); }, 3000); }
+    function stop() { window.clearInterval(timer); }
+    var wrap = doc.querySelector('.show');
+    if (wrap) {
+      wrap.addEventListener('mouseenter', stop);
+      wrap.addEventListener('mouseleave', start);
+    }
+    start();
+  })();
+
 })();
