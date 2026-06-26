@@ -28,21 +28,6 @@
 <body>
   <a class="skip-link" href="#noi-dung">Bỏ qua tới nội dung</a>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <p class="topbar__addr">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        <span>Địa chỉ: [Cập nhật địa chỉ cửa hàng]</span>
-      </p>
-      <div class="topbar__lines">
-        <a href="tel:0828796266" class="topbar__tel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15a2 2 0 0 0 2-2v-2.3a1 1 0 0 0-.8-1l-3.3-.7a1 1 0 0 0-1 .4l-.9 1.2a12.4 12.4 0 0 1-5.3-5.3l1.2-.9a1 1 0 0 0 .4-1l-.7-3.3a1 1 0 0 0-1-.8H6a2 2 0 0 0-2 2Z"/></svg>0828 796 266</a>
-        <span class="topbar__sep" aria-hidden="true"></span>
-        <a href="tel:0922270222" class="topbar__tel">0922 270 222</a>
-      </div>
-    </div>
-  </div>
-
   <!-- HEADER -->
   <header class="site-header" id="trang-chu">
     <div class="container site-header__inner">
@@ -86,29 +71,11 @@
       </div>
     </section>
 
-    <!-- TÀI SẢN NHẬN CẦM (gallery ảnh) -->
-    <section class="assets section" id="tai-san" aria-labelledby="ts-title">
-      <div class="container">
-        <header class="section__head">
-          <span class="eyebrow">Tài sản nhận cầm</span>
-          <h2 class="section__title" id="ts-title">Nhận cầm <span class="text-brand">đa dạng tài sản</span></h2>
-          <p class="section__lead">Định giá cao theo giá trị thực, giải ngân nhanh, thủ tục gọn nhẹ.</p>
-        </header>
-        <div class="assets__grid">
-          <!-- ẢNH DEMO: thay bằng ảnh thật của tài sản -->
-          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm ô tô" /><span class="asset-card__label"><strong>Cầm ô tô</strong><span>Kể cả xe không chính chủ</span></span></a>
-          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/16330298/pexels-photo-16330298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm xe máy" /><span class="asset-card__label"><strong>Cầm xe máy</strong><span>Định giá nhanh, nhận tiền ngay</span></span></a>
-          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/20296321/pexels-photo-20296321.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm nhà đất" /><span class="asset-card__label"><strong>Cầm nhà đất</strong><span>Hạn mức lớn, định giá cao</span></span></a>
-          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/8705787/pexels-photo-8705787.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vàng và tài sản giá trị" /><span class="asset-card__label"><strong>Vàng &amp; tài sản</strong><span>Nhiều loại tài sản giá trị</span></span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- DỊCH VỤ -->
+    <!-- DỊCH VỤ CHỦ LỰC (đưa lên trước, là dịch vụ chính, làm to/rõ) -->
     <section class="services section section--soft" id="dich-vu" aria-labelledby="dv-title">
       <div class="container">
         <header class="section__head">
-          <span class="eyebrow">Dịch vụ của chúng tôi</span>
+          <span class="eyebrow">Dịch vụ chính</span>
           <h2 class="section__title" id="dv-title">Dịch vụ cầm đồ <span class="text-brand">chủ lực</span></h2>
           <p class="section__lead">Đa dạng tài sản, định giá cao, giải ngân nhanh, tối ưu cho nhu cầu vốn gấp.</p>
         </header>
@@ -122,6 +89,24 @@
           <li class="service reveal"><span class="service__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 30 32 14l20 16M18 27v21h28V27"/><path d="M30 48v-9h4v9"/></svg></span><h3>Cầm xe tại nhà</h3><p>Nhân viên đến tận nơi định giá &amp; giải ngân.</p></li>
           <li class="service service--cta reveal"><div class="service__cta-core"><h3>Tài sản khác?</h3><p>Gọi để được tư vấn riêng.</p><a href="tel:0922270222" class="link-brand">0922 270 222 →</a></div></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- TÀI SẢN NHẬN CẦM (gallery ảnh, đặt sau dịch vụ chủ lực) -->
+    <section class="assets section" id="tai-san" aria-labelledby="ts-title">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow">Tài sản nhận cầm</span>
+          <h2 class="section__title" id="ts-title">Nhận cầm <span class="text-brand">đa dạng tài sản</span></h2>
+          <p class="section__lead">Định giá cao theo giá trị thực, giải ngân nhanh, thủ tục gọn nhẹ.</p>
+        </header>
+        <div class="assets__grid">
+          <!-- Ảnh stock Pexels: thay bằng ảnh thật của tài sản -->
+          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm ô tô" /><span class="asset-card__label"><strong>Cầm ô tô</strong><span>Kể cả xe không chính chủ</span></span></a>
+          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/16330298/pexels-photo-16330298.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm xe máy" /><span class="asset-card__label"><strong>Cầm xe máy</strong><span>Định giá nhanh, nhận tiền ngay</span></span></a>
+          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/20296321/pexels-photo-20296321.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cầm nhà đất" /><span class="asset-card__label"><strong>Cầm nhà đất</strong><span>Hạn mức lớn, định giá cao</span></span></a>
+          <a href="#tu-van" class="asset-card reveal"><img class="ph" loading="lazy" src="https://images.pexels.com/photos/8705787/pexels-photo-8705787.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vàng và tài sản giá trị" /><span class="asset-card__label"><strong>Vàng &amp; tài sản</strong><span>Nhiều loại tài sản giá trị</span></span></a>
+        </div>
       </div>
     </section>
 
